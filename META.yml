@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Test-Spec
-version:            0.31
+version:            0.32
 abstract:           Write tests in a declarative specification style
 author:
     - Philip Garrett <philip.garrett@icainformatics.com>
@@ -25,7 +25,7 @@ no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.54
+generated_by:       ExtUtils::MakeMaker version 6.56
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
