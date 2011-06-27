@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Test-Spec
-version:            0.33
+version:            0.34
 abstract:           Write tests in a declarative specification style
 author:
     - Philip Garrett <philip.garrett@icainformatics.com>
