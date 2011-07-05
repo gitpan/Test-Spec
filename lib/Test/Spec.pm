@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Test::Trap ();        # load as early as possible to override CORE::exit
 
-our $VERSION = '0.35';
+our $VERSION = '0.36';
 
 use base qw(Exporter);
 
@@ -323,10 +323,12 @@ sub spec_helper ($) {
   }
   my $sub = eval "package $callpkg;\n" . q[sub {
     my ($file,$origpath) = @_;
-    if (not defined(do $file)) {
-      my $err = $! || $@;
-      die "could not load spec_helper '$origpath': $err";
-    }
+    open(my $IN, "<", $file)
+      || die "could not open spec_helper '$origpath': $!";
+    defined(my $content = do { local $/; <$IN> })
+      || die "could not read spec_helper '$origpath': $!";
+    eval("# line 1 \"$origpath\"\n" . $content);
+    die "$@\n" if $@;
   }];
   $sub->($load_path,$filespec);
 }
@@ -662,7 +664,7 @@ C<after "all"> blocks run I<after> C<after "each"> blocks.
 
 Defines a group of examples that can later be included in
 C<describe> blocks or other C<shared_examples_for> blocks. See
-L</Shared Example Groups>.
+L</Shared example groups>.
 
 Example group names are B<global>.
 
