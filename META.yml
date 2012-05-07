@@ -1,32 +1,32 @@
---- #YAML:1.0
-name:               Test-Spec
-version:            0.44
-abstract:           Write tests in a declarative specification style
+---
+abstract: 'Write tests in a declarative specification style'
 author:
-    - Philip Garrett <philip.garrett@icainformatics.com>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Philip Garrett <philip.garrett@icainformatics.com>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Carp:            0
-    constant:        0
-    Exporter:        0
-    List::Util:      0
-    Package::Stash:  0.23
-    Scalar::Util:    0
-    TAP::Parser:     0
-    Test::Deep:      0.103
-    Test::More:      0
-    Test::Trap:      0
-    Tie::IxHash:     0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.112150'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Test-Spec
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Carp: 0
+  Exporter: 0
+  List::Util: 0
+  Package::Stash: 0.23
+  Scalar::Util: 0
+  TAP::Parser: 0
+  Test::Deep: 0.103
+  Test::More: 0
+  Test::Trap: 0
+  Tie::IxHash: 0
+  constant: 0
+version: 0.45
