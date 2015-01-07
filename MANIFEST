@@ -29,4 +29,5 @@ t/strict_violating_spec.pl
 t/subset_spec.pl
 t/test_helper.pl
 t/uncompilable_spec.pl
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
